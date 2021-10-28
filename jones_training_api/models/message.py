@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.fields import Field
 
@@ -12,5 +13,5 @@ class Message(models.Model):
 
     sender_id = models.ForeignKey(User, on_delete=models.CASCADE)
     recipient_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    read = models.BooleanField(Field.default(False))
+    read = models.BooleanField(default=False)
     message = models.CharField(max_length=5000)

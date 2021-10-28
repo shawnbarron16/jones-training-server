@@ -12,4 +12,4 @@ class Friendship(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     friend_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    pending = models.BooleanField(Field.default(True))
+    pending = models.BooleanField(default=True)

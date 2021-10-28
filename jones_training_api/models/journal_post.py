@@ -1,6 +1,6 @@
 from django.db import models
 
-class journal_post(models.Model):
+class Journal_Post(models.Model):
     """Journal Post Model
     Fields:
         title (CharField): The title of the post

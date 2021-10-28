@@ -1,6 +1,6 @@
 from django.db import models
 
-class video_post(models.Model):
+class Video_Post(models.Model):
     """Video Post Model
     Fields:
         title (CharField): The title of the video post

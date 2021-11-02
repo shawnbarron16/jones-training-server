@@ -11,7 +11,7 @@ class Message(models.Model):
         message (CharField): The actual contents of the message
     """
 
-    sender_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    recipient_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    sender = models.ForeignKey(User, related_name='this_sender', on_delete=models.CASCADE)
+    recipient = models.ForeignKey(User, related_name='this_recipient', on_delete=models.CASCADE)
     read = models.BooleanField(default=False)
     message = models.CharField(max_length=5000)

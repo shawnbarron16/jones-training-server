@@ -5,4 +5,12 @@
         "--load-plugins=pylint_django",
         "--django-settings-module=<jones_training>.settings",
     ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "DB",
+            "database": "db.sqlite3"
+        }
+    ],
 }
